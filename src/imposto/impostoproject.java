@@ -10,7 +10,7 @@ public class impostoproject {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
-		double ras, raps, ragc, gn, ge, isalario, iservicos, icapital;
+		double ras, raps, ragc, gn, ge, isalario = 0, iservicos = 0, icapital = 0, md, gd;
 		
 		//LEITURA DE DADOS
 		
@@ -57,6 +57,25 @@ public class impostoproject {
 		else {
 			System.out.println("Imposto sobre ganho de capital: 0.00");
 		}
+		// DEDUCOES
+		
+		System.out.println();
+		
+		System.out.println("DEDUÇÕES:");
+		
+		md = (isalario * 30/100) + (iservicos * 30/100) + (icapital *30/100);
+		
+		System.out.println("Máximo dedutível:" + md);
+		
+		gd = gn + ge;
+		
+		System.out.println("Gastos dedutíveis:" + gd);
+		
+		
+		
+		
+		
+		
 		
 		sc.close();
 
