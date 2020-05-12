@@ -10,7 +10,7 @@ public class impostoproject {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
-		double ras, raps, ragc, gn, ge, isalario = 0, iservicos = 0, icapital = 0, md, gd;
+		double ras, raps, ragc, gn, ge, isalario = 0, iservicos = 0, icapital = 0, md, gd, ibt, id, ab;
 		
 		//LEITURA DE DADOS
 		
@@ -70,6 +70,29 @@ public class impostoproject {
 		gd = gn + ge;
 		
 		System.out.println("Gastos dedutíveis:" + gd);
+		
+		System.out.println();
+		// RELATORIO FINALIZADO
+		
+		System.out.println("RESUMO:");
+		ibt = isalario + iservicos + icapital;
+		
+		System.out.println("Imposto bruto total: " + ibt);
+		
+		if(md < gd) {
+			ab = md;
+			System.out.println("Abatimento:" + ab);
+		}
+		else {
+			ab = gd;
+			System.out.println("Abatimento: " + ab);
+		}
+		
+		id = ibt - ab;
+		
+		System.out.println("Imposto devido: " + id);
+		
+		
 		
 		
 		
